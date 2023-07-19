@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://be7vy87xjyvxy"]
+[gd_scene load_steps=6 format=3 uid="uid://be7vy87xjyvxy"]
 
 [ext_resource type="PackedScene" uid="uid://d3kyawodv8m3p" path="res://scenes/player/player.tscn" id="1_ki01o"]
 
@@ -10,6 +10,9 @@ size = Vector2(171, 774.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1sxt"]
 size = Vector2(177, 771)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnqoh"]
+size = Vector2(512, 13)
 
 [node name="main" type="Node2D"]
 
@@ -34,3 +37,11 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall_right"]
 position = Vector2(1240.5, 385.5)
 shape = SubResource("RectangleShape2D_r1sxt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(222, 492)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(248, 65)
+shape = SubResource("RectangleShape2D_lnqoh")
+one_way_collision = true

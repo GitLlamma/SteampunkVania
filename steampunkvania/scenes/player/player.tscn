@@ -10,18 +10,16 @@ height = 64.0
 script = ExtResource("1_ec83m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CapsuleShape2D_bo3f5")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="debug draw" type="Polygon2D" parent="."]
-color = Color(0, 0.6, 0.701961, 0.419608)
 polygon = PackedVector2Array(-16, 0, -16, -16, -14, -24, -8, -30, 0, -32, 8, -30, 14, -24, 16, -16, 16, 0, 16, 17, 13, 26, 8, 30, 0, 32, -8, 30, -13, 25, -16, 17)
 
 [node name="wall_check_left" type="RayCast2D" parent="."]
-target_position = Vector2(-19, 0)
+target_position = Vector2(-21, 0)
 collide_with_areas = true
 
 [node name="wall_check_right" type="RayCast2D" parent="."]
-target_position = Vector2(19, 0)
+target_position = Vector2(21, 0)
 collide_with_areas = true
